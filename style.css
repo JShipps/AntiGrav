@@ -1,0 +1,1371 @@
+/* ==========================================================================
+   GRAVITAS // Principles of Anti-Gravity Template
+   Theme: Anti-Gravity Aesthetics (Weightlessness, Levitation, Quantum Dynamics)
+   Framework: Bootstrap 5 + Custom Futuristic CSS
+   ========================================================================== */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Color Palette */
+  --bg-dark: #040711;
+  --bg-deep: #070d20;
+  --bg-card: rgba(10, 19, 44, 0.65);
+  --bg-card-hover: rgba(16, 28, 64, 0.85);
+  --bg-glass: rgba(7, 13, 32, 0.75);
+  --bg-glass-border: rgba(0, 240, 255, 0.18);
+
+  /* Accents */
+  --cyan: #00f0ff;
+  --cyan-glow: rgba(0, 240, 255, 0.45);
+  --cyan-subtle: rgba(0, 240, 255, 0.08);
+  --violet: #8e2de2;
+  --violet-glow: rgba(142, 45, 226, 0.4);
+  --emerald: #00ffa3;
+  --emerald-glow: rgba(0, 255, 163, 0.4);
+  --rose: #ff2a85;
+  --amber: #ffaa00;
+
+  /* Typography */
+  --font-display: 'Orbitron', -apple-system, sans-serif;
+  --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Text Colors */
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+
+  /* Shadows and Glows */
+  --glow-sm: 0 0 15px var(--cyan-glow);
+  --glow-md: 0 0 30px var(--cyan-glow);
+  --glow-lg: 0 0 50px var(--cyan-glow);
+  --glow-violet: 0 0 30px var(--violet-glow);
+
+  /* Levitation & Float Variables */
+  --float-drift: -18px;
+  --float-duration: 6s;
+  --gravity-multiplier: 1;
+}
+
+/* Gravity Modes Applied to Body */
+body.gravity-zero {
+  --float-drift: -28px;
+  --float-duration: 8s;
+  --gravity-multiplier: 0;
+}
+
+body.gravity-lunar {
+  --float-drift: -12px;
+  --float-duration: 7s;
+  --gravity-multiplier: 0.16;
+}
+
+body.gravity-anti {
+  --float-drift: -40px;
+  --float-duration: 4.5s;
+  --gravity-multiplier: -1;
+}
+
+body.gravity-quantum {
+  --float-drift: -22px;
+  --float-duration: 3.5s;
+}
+
+/* ==========================================================================
+   Base & Reset
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+  transition: background-color 0.8s ease;
+}
+
+/* Custom Selection */
+::selection {
+  background: var(--cyan);
+  color: var(--bg-dark);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.25);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan);
+  box-shadow: 0 0 10px var(--cyan);
+}
+
+/* Ambient Background Canvas */
+#ambient-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Radial Cosmic Backdrop Glow */
+.cosmic-nebula {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 25%, rgba(0, 240, 255, 0.07) 0%, transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(142, 45, 226, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 90%, rgba(0, 255, 163, 0.04) 0%, transparent 45%);
+}
+
+/* Grid Overlay with Perspective */
+.grid-floor {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40vh;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+              linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.gradient-text-cyan {
+  background: linear-gradient(135deg, #ffffff 0%, var(--cyan) 60%, #0099ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-violet {
+  background: linear-gradient(135deg, var(--cyan) 0%, #b388ff 50%, var(--violet) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-gold {
+  background: linear-gradient(135deg, #ffffff 0%, var(--emerald) 50%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--cyan);
+  padding: 0.35rem 0.85rem;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+}
+
+.eyebrow .pulse-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--cyan);
+  animation: pulse-dot 1.8s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.7); }
+}
+
+/* ==========================================================================
+   Floating & Levitation Keyframes
+   ========================================================================== */
+.levitate-slow {
+  animation: levitate-drift var(--float-duration) ease-in-out infinite alternate;
+}
+
+.levitate-medium {
+  animation: levitate-drift calc(var(--float-duration) * 0.75) ease-in-out infinite alternate;
+  animation-delay: -1.5s;
+}
+
+.levitate-fast {
+  animation: levitate-drift calc(var(--float-duration) * 0.5) ease-in-out infinite alternate;
+  animation-delay: -3s;
+}
+
+.levitate-rotate {
+  animation: levitate-drift-rot var(--float-duration) ease-in-out infinite alternate;
+}
+
+@keyframes levitate-drift {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(calc(var(--float-drift) * 0.6)) rotate(0.4deg);
+  }
+  100% {
+    transform: translateY(var(--float-drift)) rotate(-0.4deg);
+  }
+}
+
+@keyframes levitate-drift-rot {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translateY(var(--float-drift)) rotate(2deg) scale(1.02);
+  }
+}
+
+body.gravity-anti .levitate-slow,
+body.gravity-anti .levitate-medium,
+body.gravity-anti .levitate-fast {
+  box-shadow: 0 -15px 35px rgba(0, 240, 255, 0.25);
+  border-color: rgba(0, 240, 255, 0.5);
+}
+
+/* ==========================================================================
+   Navigation Bar (Floating Island)
+   ========================================================================== */
+.navbar-custom {
+  position: fixed;
+  top: 18px;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-container-pill {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 100px;
+  padding: 0.6rem 1.6rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-custom.scrolled .nav-container-pill {
+  border-color: rgba(0, 240, 255, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 240, 255, 0.15);
+}
+
+.navbar-brand-custom {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-ring {
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--cyan);
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 5s linear infinite;
+  box-shadow: 0 0 10px var(--cyan);
+}
+
+.brand-ring-inner {
+  position: absolute;
+  inset: 5px;
+  border: 1.5px dashed var(--violet);
+  border-radius: 50%;
+  animation: spin-rev 8s linear infinite;
+}
+
+.brand-dot {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #ffffff, 0 0 15px var(--cyan);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-rev {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.brand-text-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+}
+
+.brand-text-sub {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  color: var(--cyan);
+  display: block;
+  margin-top: -3px;
+}
+
+.nav-link-custom {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.nav-link-custom:hover {
+  color: #ffffff;
+  background: rgba(0, 240, 255, 0.08);
+  text-shadow: 0 0 10px var(--cyan);
+}
+
+.nav-link-custom.active {
+  color: var(--cyan);
+  background: rgba(0, 240, 255, 0.12);
+}
+
+/* ==========================================================================
+   Buttons & Interactive Elements
+   ========================================================================== */
+.btn-gravitas {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
+  z-index: 1;
+}
+
+.btn-gravitas-primary {
+  background: linear-gradient(135deg, #00f0ff 0%, #0084ff 100%);
+  color: #040711;
+  box-shadow: 0 4px 20px rgba(0, 240, 255, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-gravitas-primary:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 240, 255, 0.65), 0 0 40px rgba(0, 240, 255, 0.4);
+  color: #040711;
+}
+
+.btn-gravitas-outline {
+  background: rgba(10, 19, 44, 0.4);
+  color: #ffffff;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-gravitas-outline:hover {
+  border-color: var(--cyan);
+  background: rgba(0, 240, 255, 0.12);
+  color: var(--cyan);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 240, 255, 0.25);
+}
+
+.btn-gravitas-glow {
+  background: rgba(142, 45, 226, 0.2);
+  color: #ffffff;
+  border: 1px solid rgba(142, 45, 226, 0.4);
+}
+
+.btn-gravitas-glow:hover {
+  background: rgba(142, 45, 226, 0.35);
+  border-color: var(--violet);
+  box-shadow: 0 0 25px var(--violet-glow);
+  transform: translateY(-3px);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Hero Section & Quantum Core Visual
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 130px;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+.hero-stats-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(0, 240, 255, 0.05);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 999px;
+  padding: 0.4rem 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--cyan);
+  backdrop-filter: blur(12px);
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.hero-desc {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 580px;
+  margin-bottom: 2.2rem;
+  line-height: 1.7;
+}
+
+.hero-telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.5rem;
+}
+
+.telemetry-item {
+  font-family: var(--font-mono);
+}
+
+.telemetry-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.2rem;
+}
+
+.telemetry-val {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: var(--font-display);
+}
+
+.telemetry-val.cyan { color: var(--cyan); }
+.telemetry-val.emerald { color: var(--emerald); }
+.telemetry-val.rose { color: var(--rose); }
+
+/* ==========================================================================
+   CSS 3D Quantum Levitation Core (Hero Centerpiece)
+   ========================================================================== */
+.levitation-stage {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.quantum-core-wrapper {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantum-ring {
+  position: absolute;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.ring-outer {
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.3), inset 0 0 20px rgba(0, 240, 255, 0.15);
+  animation: rotate-x 12s linear infinite;
+}
+
+.ring-middle {
+  width: 240px;
+  height: 240px;
+  border: 2px dashed rgba(142, 45, 226, 0.6);
+  box-shadow: 0 0 20px rgba(142, 45, 226, 0.35);
+  animation: rotate-y 9s linear infinite reverse;
+}
+
+.ring-inner {
+  width: 180px;
+  height: 180px;
+  border: 2px solid rgba(0, 255, 163, 0.5);
+  box-shadow: 0 0 25px rgba(0, 255, 163, 0.3);
+  animation: rotate-z 7s linear infinite;
+}
+
+.levitating-orb {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, var(--cyan) 40%, #0044aa 85%, #001133 100%);
+  box-shadow:
+    0 0 40px var(--cyan),
+    0 0 80px rgba(0, 240, 255, 0.5),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.8),
+    inset 5px 5px 12px rgba(255, 255, 255, 0.8);
+  animation: float-orb 4s ease-in-out infinite alternate;
+  position: relative;
+  z-index: 5;
+}
+
+.levitating-orb::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  animation: pulse-aura 2.5s ease-in-out infinite;
+}
+
+.levitation-shadow {
+  position: absolute;
+  bottom: 30px;
+  width: 140px;
+  height: 24px;
+  background: radial-gradient(ellipse at center, rgba(0, 240, 255, 0.35) 0%, rgba(0, 0, 0, 0.7) 50%, transparent 80%);
+  border-radius: 50%;
+  filter: blur(6px);
+  animation: shadow-breathe 4s ease-in-out infinite alternate;
+}
+
+.hud-node {
+  position: absolute;
+  background: rgba(10, 20, 48, 0.85);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-main);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  white-space: nowrap;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.hud-node:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 20px var(--cyan-glow);
+  transform: scale(1.05);
+}
+
+.hud-node-top {
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hud-node-left {
+  left: -20px;
+  top: 40%;
+}
+
+.hud-node-right {
+  right: -20px;
+  top: 55%;
+}
+
+.hud-node-bottom {
+  bottom: 25px;
+  right: 20px;
+}
+
+.hud-node .hud-tag {
+  color: var(--cyan);
+  font-weight: 700;
+  margin-right: 0.35rem;
+}
+
+@keyframes rotate-x {
+  0% { transform: rotateX(65deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(65deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+@keyframes rotate-y {
+  0% { transform: rotateX(-50deg) rotateY(0deg) rotateZ(30deg); }
+  100% { transform: rotateX(-50deg) rotateY(360deg) rotateZ(30deg); }
+}
+
+@keyframes rotate-z {
+  0% { transform: rotateX(30deg) rotateY(40deg) rotateZ(0deg); }
+  100% { transform: rotateX(30deg) rotateY(40deg) rotateZ(360deg); }
+}
+
+@keyframes float-orb {
+  0% { transform: translateY(8px) scale(0.98); }
+  100% { transform: translateY(-16px) scale(1.02); }
+}
+
+@keyframes pulse-aura {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.4; }
+  50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.8; }
+}
+
+@keyframes shadow-breathe {
+  0% { transform: scale(1.1); opacity: 0.4; }
+  100% { transform: scale(0.75); opacity: 0.15; }
+}
+
+/* ==========================================================================
+   Principles Cards (Interactive 3D Tilt & Lift)
+   ========================================================================== */
+.section-pad {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.section-header {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 680px;
+}
+
+.principle-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 20px;
+  padding: 2.2rem 2rem;
+  height: 100%;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.principle-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--cyan) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.principle-card:hover {
+  transform: translateY(-12px);
+  border-color: rgba(0, 240, 255, 0.45);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 240, 255, 0.18);
+  background: var(--bg-card-hover);
+}
+
+.principle-card:hover::before {
+  opacity: 1;
+}
+
+.principle-card-number {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.08);
+  position: absolute;
+  top: 1.5rem;
+  right: 1.8rem;
+  pointer-events: none;
+  transition: color 0.4s ease;
+}
+
+.principle-card:hover .principle-card-number {
+  color: rgba(0, 240, 255, 0.25);
+  text-shadow: 0 0 15px var(--cyan);
+}
+
+.principle-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--cyan);
+  margin-bottom: 1.6rem;
+  box-shadow: inset 0 0 15px rgba(0, 240, 255, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.principle-card:hover .principle-icon-box {
+  transform: scale(1.08) rotate(4deg);
+  background: rgba(0, 240, 255, 0.16);
+  box-shadow: 0 0 20px var(--cyan-glow);
+}
+
+.principle-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+}
+
+.principle-desc {
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.principle-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.principle-equation {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--cyan);
+  background: rgba(0, 240, 255, 0.06);
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 240, 255, 0.15);
+}
+
+.principle-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Zero-G Physics Chamber (Interactive HTML5 Canvas Sandbox)
+   ========================================================================== */
+.chamber-wrapper {
+  background: rgba(8, 14, 34, 0.8);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 240, 255, 0.12);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.chamber-hud-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.chamber-status {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--cyan);
+}
+
+.chamber-controls-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.canvas-viewport-container {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: 16px;
+  background: radial-gradient(circle at center, #060b1d 0%, #030611 100%);
+  border: 1px solid rgba(0, 240, 255, 0.12);
+  overflow: hidden;
+  cursor: grab;
+}
+
+.canvas-viewport-container:active {
+  cursor: grabbing;
+}
+
+#physics-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.chamber-canvas-overlay {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  pointer-events: none;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+  background: rgba(4, 7, 17, 0.6);
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.chamber-canvas-overlay span.active-val {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.chamber-footer-controls {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.control-group-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.control-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.control-label span.value {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.custom-range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  outline: none;
+}
+
+.custom-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--cyan);
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--cyan);
+  transition: transform 0.15s ease;
+}
+
+.custom-range::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+}
+
+/* ==========================================================================
+   Gravity Controller Floating Dock (Interactive HUD)
+   ========================================================================== */
+.gravity-hud-dock {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1040;
+  background: rgba(7, 13, 32, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 240, 255, 0.2);
+  border-radius: 999px;
+  padding: 0.45rem 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: transform 0.3s ease;
+}
+
+.gravity-hud-dock:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9), 0 0 35px rgba(0, 240, 255, 0.35);
+}
+
+.hud-dock-title {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  padding: 0 0.8rem 0 0.6rem;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dock-pill-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.dock-pill-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.dock-pill-btn.active {
+  background: linear-gradient(135deg, var(--cyan) 0%, #0088ff 100%);
+  color: #040711;
+  box-shadow: 0 0 15px var(--cyan-glow);
+}
+
+.dock-sound-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-left: 0.3rem;
+  transition: all 0.2s ease;
+}
+
+.dock-sound-btn:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+}
+
+.dock-sound-btn.active {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  box-shadow: 0 0 10px var(--cyan-glow);
+}
+
+/* ==========================================================================
+   Waveform / Harmonic Tuner Visualizer
+   ========================================================================== */
+.wave-canvas-box {
+  width: 100%;
+  height: 220px;
+  background: rgba(3, 6, 17, 0.7);
+  border: 1px solid rgba(0, 240, 255, 0.18);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+#wave-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   Spec Sheet & Comparison Matrix Table
+   ========================================================================== */
+.table-gravitas {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: var(--font-heading);
+}
+
+.table-gravitas th {
+  background: rgba(14, 25, 58, 0.8);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cyan);
+  padding: 1.1rem 1.4rem;
+  border-top: 1px solid rgba(0, 240, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.table-gravitas th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.table-gravitas th:last-child {
+  border-top-right-radius: 12px;
+}
+
+.table-gravitas td {
+  background: rgba(7, 13, 32, 0.5);
+  padding: 1.1rem 1.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  vertical-align: middle;
+}
+
+.table-gravitas tr:hover td {
+  background: rgba(0, 240, 255, 0.05);
+  color: #ffffff;
+}
+
+.table-gravitas tr.highlighted td {
+  background: rgba(0, 240, 255, 0.08);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.table-gravitas tr.highlighted td:first-child {
+  color: var(--cyan);
+  font-family: var(--font-display);
+}
+
+/* ==========================================================================
+   Accordion Customization (Dark Glassmorphism)
+   ========================================================================== */
+.accordion-gravitas .accordion-item {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: 16px !important;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+}
+
+.accordion-gravitas .accordion-button {
+  background: transparent;
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1.3rem 1.5rem;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.accordion-gravitas .accordion-button:not(.collapsed) {
+  background: rgba(0, 240, 255, 0.08);
+  color: var(--cyan);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+}
+
+.accordion-gravitas .accordion-button::after {
+  filter: invert(1) hue-rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.accordion-gravitas .accordion-body {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  padding: 1.4rem 1.6rem;
+}
+
+/* ==========================================================================
+   Modals & High-Tech Schematics
+   ========================================================================== */
+.modal-content-gravitas {
+  background: rgba(9, 16, 38, 0.95);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.9), 0 0 50px rgba(0, 240, 255, 0.25);
+  color: var(--text-main);
+}
+
+.modal-header-gravitas {
+  border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+  padding: 1.4rem 1.8rem;
+}
+
+.modal-footer-gravitas {
+  border-top: 1px solid rgba(0, 240, 255, 0.15);
+  padding: 1.2rem 1.8rem;
+}
+
+/* Form Controls */
+.form-control-gravitas {
+  background: rgba(5, 9, 23, 0.8);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 12px;
+  color: #ffffff;
+  font-family: var(--font-body);
+  padding: 0.85rem 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.form-control-gravitas:focus {
+  background: rgba(8, 14, 34, 0.95);
+  border-color: var(--cyan);
+  box-shadow: 0 0 20px var(--cyan-glow);
+  color: #ffffff;
+}
+
+.form-control-gravitas::placeholder {
+  color: var(--text-dim);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer-gravitas {
+  position: relative;
+  border-top: 1px solid rgba(0, 240, 255, 0.12);
+  background: rgba(3, 5, 14, 0.9);
+  padding-top: 80px;
+  padding-bottom: 110px;
+  z-index: 2;
+}
+
+.footer-brand-desc {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  max-width: 360px;
+}
+
+.footer-nav-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--cyan);
+  padding-left: 4px;
+  text-shadow: 0 0 8px var(--cyan);
+}
+
+.footer-bottom {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+/* ==========================================================================
+   Media Queries & Responsiveness
+   ========================================================================== */
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding-top: 120px;
+    text-align: center;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-telemetry-grid {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .levitation-stage {
+    height: 380px;
+    margin-top: 2rem;
+  }
+
+  .hud-node-left {
+    left: 10px;
+  }
+
+  .hud-node-right {
+    right: 10px;
+  }
+
+  .gravity-hud-dock {
+    width: 95%;
+    max-width: 520px;
+    justify-content: center;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .nav-container-pill {
+    padding: 0.5rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .gravity-hud-dock {
+    bottom: 12px;
+    padding: 0.35rem 0.45rem;
+  }
+
+  .dock-pill-btn {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .hud-dock-title {
+    display: none;
+  }
+}

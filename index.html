@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRAVITAS // Principles of Anti-Gravity & Levitation Architecture</title>
+  <meta name="description" content="A futuristic template exploring the principles of anti-gravity, quantum levitation, spacetime metric engineering, and weightless physics aesthetics.">
+  <meta name="theme-color" content="#040711">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Anti-Gravity Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="gravity-zero">
+
+  <!-- Fixed Ambient Background Canvas & Atmospheric Overlays -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="cosmic-nebula"></div>
+  <div class="grid-floor"></div>
+
+  <!-- ==========================================================================
+       Floating Island Navbar
+       ========================================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <div class="nav-container-pill w-100 d-flex align-items-center justify-content-between">
+        <!-- Brand Logo -->
+        <a class="navbar-brand-custom" href="#hero">
+          <div class="brand-icon">
+            <div class="brand-ring"></div>
+            <div class="brand-ring-inner"></div>
+            <div class="brand-dot"></div>
+          </div>
+          <div>
+            <span class="brand-text-title">GRAVITAS</span>
+            <span class="brand-text-sub">PRINCIPLES OF ANTI-GRAVITY</span>
+          </div>
+        </a>
+
+        <!-- Offcanvas Mobile Toggler -->
+        <button class="navbar-toggler border-0 text-cyan p-0 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2 text-info"></i>
+        </button>
+
+        <!-- Nav Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarMain">
+          <ul class="navbar-nav gap-1">
+            <li class="nav-item">
+              <a class="nav-link-custom active" href="#hero">Core</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link-custom" href="#principles">Principles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link-custom" href="#chamber">Zero-G Chamber</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link-custom" href="#applications">Applications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link-custom" href="#waveform">Wave Tuner</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link-custom" href="#specifications">Matrix</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link-custom" href="#archive">Debunking</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="d-none d-lg-flex align-items-center gap-2">
+          <a href="#chamber" class="btn-gravitas btn-gravitas-primary">
+            <span>Launch Sandbox</span>
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       Hero Section // Central Quantum Levitation Core
+       ========================================================================== -->
+  <section id="hero" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <!-- Left Hero Content -->
+        <div class="col-lg-6">
+          <div class="hero-stats-badge">
+            <span class="pulse-dot"></span>
+            <span>ACTIVE FIELD // 0.00G SUSPENSION EQUILIBRIUM</span>
+          </div>
+
+          <h1 class="hero-title">
+            DEFYING THE <br>
+            <span class="gradient-text-cyan">DOWNWARD PULL</span>
+          </h1>
+
+          <p class="hero-desc">
+            Explore the architectural and theoretical physics of levitation. Through quantum flux pinning, negative Casimir pressure, and metric spacetime engineering, mass becomes buoyant and physics unlocks zero-weight equilibrium.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#chamber" class="btn-gravitas btn-gravitas-primary">
+              <i class="bi bi-cpu-fill"></i>
+              <span>Enter Physics Lab</span>
+            </a>
+            <a href="#principles" class="btn-gravitas btn-gravitas-outline">
+              <i class="bi bi-compass"></i>
+              <span>Study 4 Principles</span>
+            </a>
+          </div>
+
+          <!-- Real-Time Telemetry Bar -->
+          <div class="hero-telemetry-grid">
+            <div class="telemetry-item">
+              <div class="telemetry-label">Net Mass Inversion</div>
+              <div class="telemetry-val cyan" id="hero-net-mass">0.00 kg (Weightless)</div>
+            </div>
+            <div class="telemetry-item">
+              <div class="telemetry-label">Spacetime Curvature</div>
+              <div class="telemetry-val emerald" id="hero-curvature">Zero-G Flat</div>
+            </div>
+            <div class="telemetry-item">
+              <div class="telemetry-label">Flux Coherence</div>
+              <div class="telemetry-val rose" id="hero-field-stab">Stable 100%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: CSS 3D Quantum Levitation Core Showcase -->
+        <div class="col-lg-6">
+          <div class="levitation-stage">
+            <!-- 3D Gimbal Rings & Core -->
+            <div class="quantum-core-wrapper levitate-slow">
+              <div class="quantum-ring ring-outer"></div>
+              <div class="quantum-ring ring-middle"></div>
+              <div class="quantum-ring ring-inner"></div>
+              <div class="levitating-orb"></div>
+            </div>
+
+            <!-- Floor Defiance Shadow -->
+            <div class="levitation-shadow"></div>
+
+            <!-- Floating Interactive HUD Annotations -->
+            <div class="hud-node hud-node-top levitate-medium">
+              <span class="hud-tag"><i class="bi bi-magnet-fill"></i> FLUX:</span>
+              <span>14.2T Pinning Lattice</span>
+            </div>
+
+            <div class="hud-node hud-node-left levitate-fast">
+              <span class="hud-tag"><i class="bi bi-activity"></i> CASIMIR:</span>
+              <span>Negative Radiation Pressure</span>
+            </div>
+
+            <div class="hud-node hud-node-right levitate-medium">
+              <span class="hud-tag"><i class="bi bi-bounding-box-circles"></i> METRIC:</span>
+              <span>Alcubierre Spatial Tensor</span>
+            </div>
+
+            <div class="hud-node hud-node-bottom levitate-slow">
+              <span class="hud-tag"><i class="bi bi-shield-shaded"></i> INERTIA:</span>
+              <span>Mass Offset: -100%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: The 4 Fundamental Principles of Anti-Gravity
+       ========================================================================== -->
+  <section id="principles" class="section-pad">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="eyebrow mx-auto">
+          <span class="pulse-dot"></span>
+          <span>THEORETICAL FOUNDATIONS</span>
+        </div>
+        <h2 class="section-title">
+          THE 4 PILLARS OF <span class="gradient-text-cyan">LEVITATION</span>
+        </h2>
+        <p class="section-subtitle mx-auto">
+          From quantum electrodynamics to macroscopic general relativity, four distinct scientific paradigms challenge Newton's universal gravitation and unlock weightless mechanics.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Principle 01 -->
+        <div class="col-lg-6 col-xl-3">
+          <div class="principle-card">
+            <div class="principle-card-number">01</div>
+            <div class="principle-icon-box">
+              <i class="bi bi-magnet"></i>
+            </div>
+            <h3 class="principle-title">Superconducting Quantum Levitation</h3>
+            <p class="principle-desc">
+              Type-II superconductors expel external magnetic fields via the Meissner-Ochsenfeld effect while locking magnetic vortices into microscopic crystal defects. This "flux pinning" traps objects in rock-solid 3D spatial coordinates without physical contact or power decay.
+            </p>
+            <div class="principle-footer">
+              <span class="principle-equation">B = 0 in bulk</span>
+              <span class="principle-badge">YBCO High-Tc</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Principle 02 -->
+        <div class="col-lg-6 col-xl-3">
+          <div class="principle-card">
+            <div class="principle-card-number">02</div>
+            <div class="principle-icon-box">
+              <i class="bi bi-bounding-box"></i>
+            </div>
+            <h3 class="principle-title">Metric Spacetime Engineering</h3>
+            <p class="principle-desc">
+              Rather than accelerating through spacetime against a gravitational vector, metric engineering warps the Riemannian manifold itself. By contracting space in front and expanding space behind, the passenger envelope remains strictly weightless in local inertial freefall.
+            </p>
+            <div class="principle-footer">
+              <span class="principle-equation">T<sub>&mu;&nu;</sub> &lt; 0 Metric</span>
+              <span class="principle-badge">Alcubierre Dipole</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Principle 03 -->
+        <div class="col-lg-6 col-xl-3">
+          <div class="principle-card">
+            <div class="principle-card-number">03</div>
+            <div class="principle-icon-box">
+              <i class="bi bi-exclude"></i>
+            </div>
+            <h3 class="principle-title">Negative Energy & Casimir Inversion</h3>
+            <p class="principle-desc">
+              Quantum vacuum zero-point fluctuations between closely aligned conducting plates create negative energy densities. At macroscopic scales, configured negative Casimir pressures exhibit repulsive gravitational analogs that mathematically cancel positive mass attractive wells.
+            </p>
+            <div class="principle-footer">
+              <span class="principle-equation">&Delta;P &prop; -&hbar;c / d<sup>4</sup></span>
+              <span class="principle-badge">Vacuum Dynamic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Principle 04 -->
+        <div class="col-lg-6 col-xl-3">
+          <div class="principle-card">
+            <div class="principle-card-number">04</div>
+            <div class="principle-icon-box">
+              <i class="bi bi-lightning-charge"></i>
+            </div>
+            <h3 class="principle-title">Asymmetric EHD Field Drift</h3>
+            <p class="principle-desc">
+              The Biefeld-Brown phenomenon utilizes asymmetric high-voltage electrostatic gradients across specialized dielectric materials. Ion momentum transfer coupled with non-linear electromagnetic stress tensors generates net directional buoyant thrust against local planetary gravity.
+            </p>
+            <div class="principle-footer">
+              <span class="principle-equation">F &prop; &epsilon; &middot; V<sup>2</sup> / d<sup>2</sup></span>
+              <span class="principle-badge">Ionic Gradient</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Interactive Zero-G Physics Chamber
+       ========================================================================== -->
+  <section id="chamber" class="section-pad">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="eyebrow mx-auto">
+          <span class="pulse-dot"></span>
+          <span>TACTILE EXPERIMENTATION</span>
+        </div>
+        <h2 class="section-title">
+          INTERACTIVE <span class="gradient-text-cyan">ZERO-G CHAMBER</span>
+        </h2>
+        <p class="section-subtitle mx-auto">
+          Test mass behavior under simulated zero-gravity and inverted anti-gravity fields. Drag entities, fling them across the vacuum, toggle superconducting flux locks, and observe quantum repulsion.
+        </p>
+      </div>
+
+      <!-- Physics Chamber Canvas Container -->
+      <div class="chamber-wrapper">
+        <!-- Chamber Header Bar -->
+        <div class="chamber-hud-header">
+          <div class="chamber-status">
+            <i class="bi bi-record-circle text-danger"></i>
+            <span>CHAMBER STATUS: <strong class="text-white">ACTIVE VACUUM (10<sup>-7</sup> Torr)</strong></span>
+          </div>
+
+          <div class="chamber-controls-bar">
+            <button id="btn-toggle-pinning" class="btn btn-sm btn-outline-info active rounded-pill px-3">
+              <i class="bi bi-magnet-fill me-1"></i> Flux Lock: ON
+            </button>
+            <button id="btn-toggle-vortex" class="btn btn-sm btn-outline-info rounded-pill px-3">
+              <i class="bi bi-arrow-repeat me-1"></i> Vortex: OFF
+            </button>
+            <button id="btn-spawn-entity" class="btn btn-sm btn-info rounded-pill px-3 text-dark fw-bold">
+              <i class="bi bi-plus-circle-fill me-1"></i> Spawn Mass
+            </button>
+            <button id="btn-reset-chamber" class="btn btn-sm btn-outline-secondary rounded-pill px-3">
+              <i class="bi bi-arrow-counterclockwise me-1"></i> Reset
+            </button>
+          </div>
+        </div>
+
+        <!-- Canvas Viewport -->
+        <div class="canvas-viewport-container">
+          <canvas id="physics-canvas"></canvas>
+
+          <!-- Real-Time HUD Overlay inside Canvas -->
+          <div class="chamber-canvas-overlay">
+            <div>ENTITIES IN FIELD: <span class="active-val" id="chamber-obj-count">9</span></div>
+            <div>NET KINETIC FLUX: <span class="active-val" id="chamber-kinetic-energy">0 J</span></div>
+            <div>GRAVITY VECTOR: <span class="active-val" id="chamber-vector">WEIGHTLESS (0-G)</span></div>
+            <div class="text-white-50 mt-1"><i class="bi bi-hand-index-thumb"></i> Click & drag masses to test inertia</div>
+          </div>
+        </div>
+
+        <!-- Footer Chamber Slider Controls -->
+        <div class="chamber-footer-controls">
+          <div class="control-group-item">
+            <div class="control-label">
+              <span>Gravity Acceleration</span>
+              <span class="value" id="chamber-gravity-val">0.00 G</span>
+            </div>
+            <input type="range" class="custom-range" id="chamber-gravity-slider" min="-1.0" max="1.0" step="0.05" value="0.0">
+            <div class="d-flex justify-content-between text-muted font-mono" style="font-size: 0.68rem;">
+              <span>-1.0G (Anti-Gravity Lift)</span>
+              <span>0.0G (Zero-G)</span>
+              <span>+1.0G (Earth)</span>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-end gap-3 text-muted font-mono" style="font-size: 0.78rem;">
+            <div><i class="bi bi-shield-check text-cyan me-1"></i> Boundary Bounce: Elastic</div>
+            <div><i class="bi bi-cpu text-info me-1"></i> Integrator: 60 FPS Verlet</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Applied Systems & Levitation Architecture
+       ========================================================================== -->
+  <section id="applications" class="section-pad">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="eyebrow mx-auto">
+          <span class="pulse-dot"></span>
+          <span>SPECULATIVE ENGINEERING</span>
+        </div>
+        <h2 class="section-title">
+          ARCHITECTURAL <span class="gradient-text-cyan">APPLICATIONS</span>
+        </h2>
+        <p class="section-subtitle mx-auto">
+          Translating theoretical weightlessness into structural reality: from floating geodesic megastructures to friction-free planetary transit networks.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- App 1: Levitating Cloud Habitats -->
+        <div class="col-lg-6">
+          <div class="principle-card">
+            <div class="d-flex align-items-start justify-content-between mb-3">
+              <div class="principle-icon-box m-0">
+                <i class="bi bi-cloud-haze2"></i>
+              </div>
+              <span class="badge rounded-pill bg-info text-dark px-3 py-2 font-mono">SPEC-A1</span>
+            </div>
+            <h3 class="principle-title">Atmospheric Geodesic Habitats</h3>
+            <p class="principle-desc">
+              One-mile diameter geodesic spheres buoyed by trapped heated internal air coupled with superconducting diamagnetic stabilizing keels. These habitats achieve indefinite aerial suspension in planetary atmospheres without burning fossil fuels or consuming reaction propellant.
+            </p>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+              <span class="font-mono text-cyan" style="font-size: 0.82rem;">Suspension: Dual Thermal + Flux Lock</span>
+              <button class="btn btn-sm btn-outline-info rounded-pill" data-bs-toggle="modal" data-bs-target="#schematicModal1">
+                <i class="bi bi-diagram-3 me-1"></i> View Schematic
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- App 2: Evacuated Mag-Warp Transit -->
+        <div class="col-lg-6">
+          <div class="principle-card">
+            <div class="d-flex align-items-start justify-content-between mb-3">
+              <div class="principle-icon-box m-0">
+                <i class="bi bi-train-front"></i>
+              </div>
+              <span class="badge rounded-pill bg-info text-dark px-3 py-2 font-mono">SPEC-T4</span>
+            </div>
+            <h3 class="principle-title">Sub-Orbital Mag-Warp Transit</h3>
+            <p class="principle-desc">
+              Hypersonic passenger capsules levitated by multi-pole Meissner tracks inside continuous low-pressure vacuum tubes. By eliminating aerodynamic friction and ground contact resistance, transcontinental travel requires 92% less kinetic energy than conventional jet aviation.
+            </p>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+              <span class="font-mono text-cyan" style="font-size: 0.82rem;">Velocity: Mach 6.8 Frictionless</span>
+              <button class="btn btn-sm btn-outline-info rounded-pill" data-bs-toggle="modal" data-bs-target="#schematicModal2">
+                <i class="bi bi-diagram-3 me-1"></i> View Schematic
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- App 3: Reactionless Orbital Mass Drivers -->
+        <div class="col-lg-6">
+          <div class="principle-card">
+            <div class="d-flex align-items-start justify-content-between mb-3">
+              <div class="principle-icon-box m-0">
+                <i class="bi bi-rocket-takeoff"></i>
+              </div>
+              <span class="badge rounded-pill bg-info text-dark px-3 py-2 font-mono">SPEC-O9</span>
+            </div>
+            <h3 class="principle-title">Reactionless Space Mass Drivers</h3>
+            <p class="principle-desc">
+              Deep space cargo propulsion eliminating Tsiolkovsky rocket equation penalties. Utilizing Casimir dynamic modulation, spacecraft manipulate local inertial mass to accelerate heavy satellite constellations without discarding reaction mass fuel.
+            </p>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+              <span class="font-mono text-cyan" style="font-size: 0.82rem;">Inertial Reduction: Up to 99.4%</span>
+              <button class="btn btn-sm btn-outline-info rounded-pill" data-bs-toggle="modal" data-bs-target="#schematicModal3">
+                <i class="bi bi-diagram-3 me-1"></i> View Schematic
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- App 4: Wearable Exo-Gravity Harness -->
+        <div class="col-lg-6">
+          <div class="principle-card">
+            <div class="d-flex align-items-start justify-content-between mb-3">
+              <div class="principle-icon-box m-0">
+                <i class="bi bi-person-walking"></i>
+              </div>
+              <span class="badge rounded-pill bg-info text-dark px-3 py-2 font-mono">SPEC-E2</span>
+            </div>
+            <h3 class="principle-title">Exo-Field Personal Levitation Suit</h3>
+            <p class="principle-desc">
+              Compact high-voltage electrostatic pulse emitters and micro-superconducting rings integrated into a personal flight harness. Operators can traverse extreme planetary terrains with zero leg strain, executing high leaps and suspended vertical ascents.
+            </p>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
+              <span class="font-mono text-cyan" style="font-size: 0.82rem;">Payload: 180 kg Neutral Buoyancy</span>
+              <button class="btn btn-sm btn-outline-info rounded-pill" data-bs-toggle="modal" data-bs-target="#schematicModal4">
+                <i class="bi bi-diagram-3 me-1"></i> View Schematic
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Gravitational Harmonic Waveform Tuner
+       ========================================================================== -->
+  <section id="waveform" class="section-pad">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="eyebrow mx-auto">
+          <span class="pulse-dot"></span>
+          <span>FIELD INTERFERENCE SYNTHESIS</span>
+        </div>
+        <h2 class="section-title">
+          GRAVITATIONAL <span class="gradient-text-cyan">WAVE TUNER</span>
+        </h2>
+        <p class="section-subtitle mx-auto">
+          Simulating destructive interference of planetary gravitational waves. Adjust the anti-phase angle (&Delta;&phi; = 180&deg;) and field amplitude to achieve total cancellation of the 9.81 m/s&sup2; downward pull.
+        </p>
+      </div>
+
+      <div class="chamber-wrapper">
+        <div class="row g-4 align-items-center">
+          <!-- Canvas Waveform Output -->
+          <div class="col-lg-8">
+            <div class="wave-canvas-box">
+              <canvas id="wave-canvas"></canvas>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mt-3 font-mono" style="font-size: 0.78rem;">
+              <div class="d-flex gap-3">
+                <span class="text-danger"><i class="bi bi-dash-lg"></i> Earth Gravity (9.81 Hz)</span>
+                <span class="text-violet"><i class="bi bi-dash-lg"></i> Anti-Phase Field</span>
+                <span class="text-cyan fw-bold"><i class="bi bi-dash-lg"></i> Resultant Metric (Zero-G)</span>
+              </div>
+              <div class="text-muted">Domain: Real-Time Harmonic Phase</div>
+            </div>
+          </div>
+
+          <!-- Tuner Controls & Readout -->
+          <div class="col-lg-4">
+            <div class="bg-dark bg-opacity-50 p-4 rounded-4 border border-secondary border-opacity-25">
+              <div class="mb-4">
+                <div class="d-flex justify-content-between font-mono mb-2">
+                  <span class="text-muted">Cancellation Efficiency</span>
+                  <span class="fw-bold" id="cancellation-efficiency" style="color: var(--emerald); font-size: 1.2rem;">99.8%</span>
+                </div>
+                <div class="progress" style="height: 6px; background: rgba(255,255,255,0.1);">
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 99.8%;"></div>
+                </div>
+              </div>
+
+              <!-- Phase Slider -->
+              <div class="mb-3">
+                <div class="control-label mb-1">
+                  <span>Anti-Phase Offset (&Delta;&phi;)</span>
+                  <span class="value" id="wave-phase-val">180°</span>
+                </div>
+                <input type="range" class="custom-range" id="wave-phase-slider" min="0" max="360" step="1" value="180">
+              </div>
+
+              <!-- Amplitude Slider -->
+              <div class="mb-3">
+                <div class="control-label mb-1">
+                  <span>Field Amplitude Multiplier</span>
+                  <span class="value" id="wave-amp-val">1.00x</span>
+                </div>
+                <input type="range" class="custom-range" id="wave-amp-slider" min="0.1" max="2.0" step="0.05" value="1.0">
+              </div>
+
+              <!-- Frequency Slider -->
+              <div class="mb-2">
+                <div class="control-label mb-1">
+                  <span>Fundamental Frequency</span>
+                  <span class="value" id="wave-freq-val">9.8 Hz</span>
+                </div>
+                <input type="range" class="custom-range" id="wave-freq-slider" min="2" max="20" step="0.2" value="9.8">
+              </div>
+
+              <div class="font-mono text-muted mt-3" style="font-size: 0.72rem;">
+                <i class="bi bi-info-circle text-cyan me-1"></i> When &Delta;&phi; = 180&deg; and Amp = 1.0x, downward gravitational acceleration perfectly flatlines to zero.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Technical Spec Sheet / Comparison Matrix
+       ========================================================================== -->
+  <section id="specifications" class="section-pad">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="eyebrow mx-auto">
+          <span class="pulse-dot"></span>
+          <span>ENGINEERING COMPARISON</span>
+        </div>
+        <h2 class="section-title">
+          PROPULSION & <span class="gradient-text-cyan">LEVITATION MATRIX</span>
+        </h2>
+        <p class="section-subtitle mx-auto">
+          Objective evaluation of conventional aerodynamics, magnetic levitation, and theoretical metric anti-gravity across primary operational parameters.
+        </p>
+      </div>
+
+      <div class="table-responsive rounded-4 border border-secondary border-opacity-25 shadow-lg">
+        <table class="table-gravitas">
+          <thead>
+            <tr>
+              <th>Methodology</th>
+              <th>Propulsion Type</th>
+              <th>Propellant Needed</th>
+              <th>Vacuum Capability</th>
+              <th>G-Force Stress</th>
+              <th>Max Velocity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Aerodynamic Airfoil</strong></td>
+              <td>Fluid Pressure Differential</td>
+              <td>Atmosphere Dependent</td>
+              <td><span class="badge bg-danger">Zero (0%)</span></td>
+              <td>High (3 - 9G)</td>
+              <td>Mach 3.2</td>
+            </tr>
+            <tr>
+              <td><strong>Chemical Rocketry</strong></td>
+              <td>Newtonian Action-Reaction</td>
+              <td>Extreme (90% dry mass)</td>
+              <td><span class="badge bg-success">100%</span></td>
+              <td>Severe (4 - 12G)</td>
+              <td>11.2 km/s (Escape)</td>
+            </tr>
+            <tr>
+              <td><strong>Superconducting Maglev</strong></td>
+              <td>Meissner Magnetic Repulsion</td>
+              <td>None (Track Guided)</td>
+              <td><span class="badge bg-success">100%</span></td>
+              <td>Low (Lateral only)</td>
+              <td>603 km/h</td>
+            </tr>
+            <tr>
+              <td><strong>Electrohydrodynamic (Biefeld)</strong></td>
+              <td>Asymmetric Ion Drift</td>
+              <td>Ionized Gas Dependent</td>
+              <td><span class="badge bg-warning text-dark">Micro-Torr only</span></td>
+              <td>Moderate (1 - 2G)</td>
+              <td>Sub-Sonic</td>
+            </tr>
+            <tr class="highlighted">
+              <td><strong>Metric Anti-Gravity</strong></td>
+              <td>Curvature Tensor Manipulation</td>
+              <td>None (Reactionless)</td>
+              <td><span class="badge bg-info text-dark">100% Ideal</span></td>
+              <td>Zero G (Freefall)</td>
+              <td>Theoretical &gt; c</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Theoretical Archive & Debunking FAQ
+       ========================================================================== -->
+  <section id="archive" class="section-pad">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="eyebrow mx-auto">
+          <span class="pulse-dot"></span>
+          <span>PHYSICS VS SPECULATION</span>
+        </div>
+        <h2 class="section-title">
+          THEORETICAL ARCHIVE & <span class="gradient-text-cyan">FAQ</span>
+        </h2>
+        <p class="section-subtitle mx-auto">
+          Addressing common misconceptions, relativistic limits, and legitimate peer-reviewed research regarding gravitational manipulation.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="accordion accordion-gravitas" id="faqAccordion">
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <i class="bi bi-question-diamond text-cyan me-3 fs-5"></i>
+                  Does anti-gravity violate the Conservation of Energy or General Relativity?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  No, provided the total stress-energy-momentum tensor \(T_{\mu\nu}\) balances. In General Relativity, gravity is not a Newtonian mechanical force, but curvature of spacetime geometry. Creating local repulsive gravitational geometry requires either negative mass equivalents or negative energy density (such as verified in Casimir cavities). The total global energy remains strictly conserved when accounting for the field generator's work.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <i class="bi bi-question-diamond text-cyan me-3 fs-5"></i>
+                  What is the fundamental difference between magnetic levitation and true anti-gravity?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Magnetic levitation (such as the Meissner effect or maglev trains) uses the electromagnetic force—which is \(10^{36}\) times stronger than gravity—to mechanically push against a permanent magnetic track. True anti-gravity would alter or nullify the gravitational coupling constant \(G\) or warp the geodesic paths of all matter and light uniformly, regardless of whether the object is magnetic or electrically charged.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <i class="bi bi-question-diamond text-cyan me-3 fs-5"></i>
+                  Has negative energy density ever been verified experimentally in physics?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. The Casimir Effect, predicted by Hendrik Casimir in 1948 and measured with extreme precision by Steve Lamoreaux in 1997, proves that quantum vacuum fluctuations between conductive boundary plates produce a net negative energy density relative to the external vacuum. Squeezed quantum light states and moving mirror boundaries also mathematically confirm localized negative energy flux.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <i class="bi bi-question-diamond text-cyan me-3 fs-5"></i>
+                  Can high-speed gyroscopes or rotating masses generate anomalous upward lift?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Rigorous experimental replications have shown that mechanical gyroscopes do not reduce their rest mass or generate net upward thrust in isolated systems. Apparent anomalies in past fringe experiments were attributed to vibration artifacts, rotor precession against support bearings, and thermal air currents rather than true gravitational shielding.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Laboratory Dispatch / Contact Form
+       ========================================================================== -->
+  <section id="contact" class="section-pad">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="chamber-wrapper p-4 p-md-5">
+            <div class="text-center mb-4">
+              <div class="eyebrow mx-auto">
+                <span class="pulse-dot"></span>
+                <span>QUANTUM RESEARCH COLLECTIVE</span>
+              </div>
+              <h2 class="section-title mt-2">
+                TRANSMIT RESEARCH <span class="gradient-text-cyan">DISPATCH</span>
+              </h2>
+              <p class="section-subtitle mx-auto">
+                Collaborate with our open-source theoretical physics initiative or request technical schematics for academic peer-review.
+              </p>
+            </div>
+
+            <form id="contact-form">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label font-mono text-muted" style="font-size: 0.78rem;">RESEARCHER IDENTIFIER</label>
+                  <input type="text" class="form-control form-control-gravitas" placeholder="Dr. V. Alcubierre" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label font-mono text-muted" style="font-size: 0.78rem;">INSTITUTIONAL ENCRYPTED COMMS</label>
+                  <input type="email" class="form-control form-control-gravitas" placeholder="researcher@institute.aether.org" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label font-mono text-muted" style="font-size: 0.78rem;">THEORETICAL DOMAIN FOCUS</label>
+                  <select class="form-select form-control-gravitas">
+                    <option selected>Superconducting Quantum Flux Pinning</option>
+                    <option>Metric Spacetime Warping (Alcubierre Tensors)</option>
+                    <option>Dynamic Casimir Vacuum Inversion</option>
+                    <option>Electrohydrodynamic Drift & Propulsion</option>
+                    <option>Macroscopic Weightless Habitat Architecture</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label font-mono text-muted" style="font-size: 0.78rem;">TELEMETRY QUERY / PROPOSAL</label>
+                  <textarea class="form-control form-control-gravitas" rows="4" placeholder="Detail your mathematical framework, simulation parameters, or peer-review proposal..." required></textarea>
+                </div>
+                <div class="col-12 text-center mt-4">
+                  <button type="submit" class="btn-gravitas btn-gravitas-primary px-5 py-3">
+                    <i class="bi bi-broadcast"></i>
+                    <span>DISPATCH TELEMETRY PACKET</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Futuristic Footer
+       ========================================================================== -->
+  <footer class="footer-gravitas">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Brand Col -->
+        <div class="col-lg-5">
+          <a class="navbar-brand-custom mb-3" href="#hero">
+            <div class="brand-icon">
+              <div class="brand-ring"></div>
+              <div class="brand-ring-inner"></div>
+              <div class="brand-dot"></div>
+            </div>
+            <div>
+              <span class="brand-text-title">GRAVITAS</span>
+              <span class="brand-text-sub">PRINCIPLES OF ANTI-GRAVITY</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            An interactive template and scientific exploration into weightlessness, levitation mechanics, and metric spacetime manipulation. Built with HTML5 and Bootstrap 5.
+          </p>
+          <div class="font-mono text-muted" style="font-size: 0.76rem;">
+            <div><i class="bi bi-geo-alt-fill text-cyan me-1"></i> COORDINATES: RA 18h 36m 56s | DEC +38° 47′ 01″</div>
+            <div class="mt-1"><i class="bi bi-hdd-network-fill text-info me-1"></i> METRIC TELEMETRY: 0.00 G NOMINAL</div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-6 col-lg-3 offset-lg-1">
+          <div class="footer-nav-title">Exploration</div>
+          <ul class="footer-links">
+            <li><a href="#hero"><i class="bi bi-chevron-right me-1"></i> Quantum Core</a></li>
+            <li><a href="#principles"><i class="bi bi-chevron-right me-1"></i> 4 Theoretical Pillars</a></li>
+            <li><a href="#chamber"><i class="bi bi-chevron-right me-1"></i> Zero-G Physics Lab</a></li>
+            <li><a href="#applications"><i class="bi bi-chevron-right me-1"></i> Floating Architecture</a></li>
+            <li><a href="#waveform"><i class="bi bi-chevron-right me-1"></i> Wave Cancellation</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources & Social -->
+        <div class="col-6 col-lg-3">
+          <div class="footer-nav-title">Open Repositories</div>
+          <ul class="footer-links">
+            <li><a href="https://arxiv.org" target="_blank" rel="noreferrer"><i class="bi bi-journal-text me-1"></i> arXiv Quantum Field Archive</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noreferrer"><i class="bi bi-github me-1"></i> GitHub Code Repository</a></li>
+            <li><a href="#archive"><i class="bi bi-shield-check me-1"></i> Relativistic Debunking</a></li>
+            <li><a href="#contact"><i class="bi bi-send me-1"></i> Dispatch Inquiry</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <div>
+          &copy; 2026 GRAVITAS Project // Open Architectural Framework. Distributed under MIT License.
+        </div>
+        <div class="d-flex gap-3">
+          <a href="#hero" class="text-cyan text-decoration-none font-mono" style="font-size: 0.8rem;">
+            <i class="bi bi-arrow-up-circle-fill me-1"></i> ASCEND TO SURFACE
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Fixed Floating Gravity Controller Dock
+       ========================================================================== -->
+  <div class="gravity-hud-dock">
+    <div class="hud-dock-title">
+      <i class="bi bi-globe2 text-cyan"></i>
+      <span>FIELD MODULATION</span>
+    </div>
+
+    <button class="dock-pill-btn" data-gravity="normal" title="Earth Gravity: 1.0G downward">
+      🌍 1.0G Earth
+    </button>
+    <button class="dock-pill-btn" data-gravity="lunar" title="Lunar Gravity: 0.16G slow float">
+      🌕 0.16G Moon
+    </button>
+    <button class="dock-pill-btn active" data-gravity="zero" title="Zero-G: 0.0G complete weightlessness">
+      🪐 0.0G Zero-G
+    </button>
+    <button class="dock-pill-btn" data-gravity="anti" title="Anti-Gravity: -1.0G upward buoyancy!">
+      ⚡ -1.0G Anti-G
+    </button>
+    <button class="dock-pill-btn" data-gravity="quantum" title="Quantum Casimir Drift">
+      🌀 Quantum Wave
+    </button>
+
+    <!-- Sound FX Switch -->
+    <button class="dock-sound-btn" id="dock-sound-btn" title="Toggle Sci-Fi Acoustic Synthesizer">
+      <i class="bi bi-volume-mute-fill"></i>
+    </button>
+  </div>
+
+  <!-- ==========================================================================
+       Schematic Blueprint Modals
+       ========================================================================== -->
+  <!-- Modal 1: Cloud Habitat -->
+  <div class="modal fade" id="schematicModal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-gravitas">
+        <div class="modal-header modal-header-gravitas">
+          <h5 class="modal-title font-display text-white" id="modalLabel1">
+            <i class="bi bi-cloud-haze2 text-cyan me-2"></i> BLUEPRINT SPEC-A1 // Atmospheric Geodesic Habitat
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="p-3 mb-3 rounded-3" style="background: rgba(0, 240, 255, 0.05); border: 1px dashed rgba(0, 240, 255, 0.3);">
+            <div class="d-flex justify-content-between font-mono text-cyan mb-2">
+              <span>SCALE: 1:5000 METRIC</span>
+              <span>STRUCTURE: FULL-GEODESIC TENSEGRITY</span>
+            </div>
+            <div class="text-center py-4">
+              <!-- SVG Schematic Graphic -->
+              <svg width="240" height="160" viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="120" cy="80" r="60" stroke="#00f0ff" stroke-width="2" stroke-dasharray="4 4"/>
+                <ellipse cx="120" cy="80" rx="60" ry="24" stroke="#8e2de2" stroke-width="1.5"/>
+                <ellipse cx="120" cy="80" rx="24" ry="60" stroke="#00ffa3" stroke-width="1.5"/>
+                <circle cx="120" cy="80" r="14" fill="#00f0ff" fill-opacity="0.4"/>
+                <line x1="120" y1="20" x2="120" y2="140" stroke="#ffffff" stroke-width="1" stroke-dasharray="2 2"/>
+                <line x1="60" y1="80" x2="180" y2="80" stroke="#ffffff" stroke-width="1" stroke-dasharray="2 2"/>
+              </svg>
+            </div>
+          </div>
+          <h6 class="font-display text-cyan mb-2">Structural Specifications</h6>
+          <p class="text-muted" style="font-size: 0.92rem;">
+            Constructed with ultra-light carbon-nanotube struts enveloped in ethylene tetrafluoroethylene (ETFE) pressurized foil. The internal thermal mass is heated 1&deg;C above ambient atmospheric temperatures, yielding a net positive buoyant lift of 1,200 metric tons. Superconducting perimeter rings lock into Earth's magnetic flux lines to eliminate turbulent buffeting.
+          </p>
+        </div>
+        <div class="modal-footer modal-footer-gravitas">
+          <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-info text-dark rounded-pill px-4 fw-bold" onclick="alert('Schematic CAD files downloaded to local buffer.')">Download CAD Matrix</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Mag-Warp Transit -->
+  <div class="modal fade" id="schematicModal2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-gravitas">
+        <div class="modal-header modal-header-gravitas">
+          <h5 class="modal-title font-display text-white" id="modalLabel2">
+            <i class="bi bi-train-front text-cyan me-2"></i> BLUEPRINT SPEC-T4 // Sub-Orbital Mag-Warp Transit
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="p-3 mb-3 rounded-3" style="background: rgba(0, 240, 255, 0.05); border: 1px dashed rgba(0, 240, 255, 0.3);">
+            <div class="text-center py-4">
+              <svg width="280" height="120" viewBox="0 0 280 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="30" width="240" height="60" rx="30" stroke="#00f0ff" stroke-width="2"/>
+                <line x1="20" y1="100" x2="260" y2="100" stroke="#8e2de2" stroke-width="3" stroke-dasharray="8 4"/>
+                <circle cx="80" cy="60" r="12" fill="#00ffa3" fill-opacity="0.3" stroke="#00ffa3"/>
+                <circle cx="200" cy="60" r="12" fill="#00ffa3" fill-opacity="0.3" stroke="#00ffa3"/>
+                <path d="M120 60 L160 60" stroke="#00f0ff" stroke-width="3"/>
+              </svg>
+            </div>
+          </div>
+          <h6 class="font-display text-cyan mb-2">Linear Induction & Meissner Levitation</h6>
+          <p class="text-muted" style="font-size: 0.92rem;">
+            The capsule hovers 120mm above high-temperature YBCO tracks inside continuous steel tubes evacuated to 100 Pascals. Linear synchronous motors provide 2G initial acceleration, reaching Mach 6.8 cruising speed. Cabin inertial dampeners offset acceleration sensations for passengers.
+          </p>
+        </div>
+        <div class="modal-footer modal-footer-gravitas">
+          <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Reactionless Mass Driver -->
+  <div class="modal fade" id="schematicModal3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-gravitas">
+        <div class="modal-header modal-header-gravitas">
+          <h5 class="modal-title font-display text-white" id="modalLabel3">
+            <i class="bi bi-rocket-takeoff text-cyan me-2"></i> BLUEPRINT SPEC-O9 // Reactionless Casimir Mass Driver
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted" style="font-size: 0.92rem;">
+            Harnesses dynamic Casimir oscillation within high-Q resonant electromagnetic cavities to create net momentum transfer without exhausting chemical reaction mass. Operates continuously in deep vacuum environments with solar-electric or fusion micro-reactors.
+          </p>
+        </div>
+        <div class="modal-footer modal-footer-gravitas">
+          <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Wearable Exo-Harness -->
+  <div class="modal fade" id="schematicModal4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-gravitas">
+        <div class="modal-header modal-header-gravitas">
+          <h5 class="modal-title font-display text-white" id="modalLabel4">
+            <i class="bi bi-person-walking text-cyan me-2"></i> BLUEPRINT SPEC-E2 // Exo-Field Personal Levitation Suit
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted" style="font-size: 0.92rem;">
+            Dual backpack-mounted superconducting toroids generating a local 0.2G negative gravitational potential well above the operator, effectively cancelling 80% of perceived body weight for effortless alpine traversal and vertical rock scaling.
+          </p>
+        </div>
+        <div class="modal-footer modal-footer-gravitas">
+          <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Telemetry Toast Notification -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1060; margin-bottom: 75px;">
+    <div id="telemetry-toast" class="toast align-items-center text-white border border-info" style="background: rgba(7, 14, 34, 0.95); backdrop-filter: blur(12px);" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body font-mono">
+          <i class="bi bi-check-circle-fill text-info me-2"></i>
+          <strong>TELEMETRY CONFIRMED:</strong> Research packet encrypted and synced to the quantum collective.
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5.3.3 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Physics Engine & Main Controller Scripts -->
+  <script src="physics-chamber.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
